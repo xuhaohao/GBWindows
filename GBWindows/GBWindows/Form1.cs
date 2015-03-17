@@ -14,9 +14,11 @@ namespace GBWindows
         {
             InitializeComponent();
 
+            list.Add(new UCItemSaveLandL15());
             list.Add(new UCItemSaveLand14());
             list.Add(new UCItemSaveLand13());
             list.Add(new UCItemSaveLand12());
+            list.Add(new UCItemSaveLandP11());
             list.Add(new UCItemSaveLandL11());
             list.Add(new UCItemSaveLand10());
         }

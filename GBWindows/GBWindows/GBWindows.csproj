@@ -49,6 +49,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
+    <Compile Include="ItemEvalKeyL15.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UCItemSaveLand10.cs">
@@ -81,6 +82,18 @@
     <Compile Include="UCItemSaveLandL11.designer.cs">
       <DependentUpon>UCItemSaveLandL11.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCItemSaveLandL15.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCItemSaveLandL15.designer.cs">
+      <DependentUpon>UCItemSaveLandL15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCItemSaveLandP11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCItemSaveLandP11.designer.cs">
+      <DependentUpon>UCItemSaveLandP11.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCItemSaveLandL11.resx">
       <DependentUpon>UCItemSaveLandL11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCItemSaveLandL15.resx">
+      <DependentUpon>UCItemSaveLandL15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCItemSaveLandP11.resx">
+      <DependentUpon>UCItemSaveLandP11.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
