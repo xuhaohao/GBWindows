@@ -32,6 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -55,6 +57,30 @@
     <Compile Include="UCItemSaveLand10.Designer.cs">
       <DependentUpon>UCItemSaveLand10.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCItemSaveLand12.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCItemSaveLand12.Designer.cs">
+      <DependentUpon>UCItemSaveLand12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCItemSaveLand13.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCItemSaveLand13.Designer.cs">
+      <DependentUpon>UCItemSaveLand13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCItemSaveLand14.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCItemSaveLand14.Designer.cs">
+      <DependentUpon>UCItemSaveLand14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCItemSaveLandL11.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCItemSaveLandL11.designer.cs">
+      <DependentUpon>UCItemSaveLandL11.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -69,6 +95,18 @@
     </Compile>
     <EmbeddedResource Include="UCItemSaveLand10.resx">
       <DependentUpon>UCItemSaveLand10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCItemSaveLand12.resx">
+      <DependentUpon>UCItemSaveLand12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCItemSaveLand13.resx">
+      <DependentUpon>UCItemSaveLand13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCItemSaveLand14.resx">
+      <DependentUpon>UCItemSaveLand14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCItemSaveLandL11.resx">
+      <DependentUpon>UCItemSaveLandL11.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

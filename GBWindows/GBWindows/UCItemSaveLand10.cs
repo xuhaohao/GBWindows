@@ -36,6 +36,9 @@ namespace GBWindows
 
         }
 
+        /// <summary>
+        /// 评价
+        /// </summary>
         private class EvaluateInfo
         {
             private string evaluateContent;
