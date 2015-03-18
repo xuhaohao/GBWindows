@@ -39,7 +39,16 @@ namespace GBWindows
             data2.Add(new Facility { StrIndex = string.Empty, FacilityType = "有调蓄雨水功能的绿地和水体的面积之和占绿地面积" });
             dgFacility.DataSource = data2;
 
-
+            var data3 = new List<Permeable>();
+            data3.Add(new Permeable() { StrIndex = "1", PermeableType = "植草砖" });
+            data3.Add(new Permeable() { StrIndex = "2", PermeableType = "透水沥青" });
+            data3.Add(new Permeable() { StrIndex = "3", PermeableType = "透水混凝土" });
+            data3.Add(new Permeable() { StrIndex = "4", PermeableType = "透水地砖" });
+            data3.Add(new Permeable() { StrIndex = "5", PermeableType = "其他" });
+            data3.Add(new Permeable() { PermeableType = "合计" });
+            data3.Add(new Permeable() { PermeableType = "硬质铺装总面积" });
+            data3.Add(new Permeable() { PermeableType = "硬质铺装地面中透水铺装面积" });
+            dgPermeable.DataSource = data3;
         }
 
 
@@ -85,6 +94,35 @@ namespace GBWindows
             {
                 get { return facilityType; }
                 set { facilityType = value; }
+            }
+
+            private string area;
+
+            public string Area
+            {
+                get { return area; }
+                set { area = value; }
+            }
+        }
+
+        /// <summary>
+        /// 透水铺装类型
+        /// </summary>
+        private class Permeable {
+            private string strIndex;
+
+            public string StrIndex
+            {
+                get { return strIndex; }
+                set { strIndex = value; }
+            }
+
+            private string permeableType;
+
+            public string PermeableType
+            {
+                get { return permeableType; }
+                set { permeableType = value; }
             }
 
             private string area;

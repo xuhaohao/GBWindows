@@ -1,6 +1,6 @@
 ﻿namespace GBWindows
 {
-    partial class UCItemSaveLandL15
+    partial class UCItemSaveLandP15
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -41,9 +41,10 @@
             this.tboMaterialSubmit = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.tboSpeciesDes = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.prgItemEvalKeyL15 = new System.Windows.Forms.PropertyGrid();
+            this.prgItemEvalKeyP15 = new System.Windows.Forms.PropertyGrid();
             this.tboTotalSource = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgScientificGreening = new System.Windows.Forms.DataGridView();
@@ -68,7 +69,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(780, 990);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -79,9 +80,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.tboMaterialSubmit);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(40, 505);
+            this.groupBox2.Location = new System.Drawing.Point(40, 543);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(700, 252);
+            this.groupBox2.Size = new System.Drawing.Size(700, 248);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "证明材料";
@@ -151,19 +152,29 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.tboSpeciesDes);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.prgItemEvalKeyL15);
+            this.groupBox1.Controls.Add(this.prgItemEvalKeyP15);
             this.groupBox1.Location = new System.Drawing.Point(40, 156);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 328);
+            this.groupBox1.Size = new System.Drawing.Size(700, 368);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "评价要点";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 342);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(365, 12);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "注：1、屋顶绿化或垂直绿化的位置、方式等；2、主要植物种类等。";
+            // 
             // tboSpeciesDes
             // 
-            this.tboSpeciesDes.Location = new System.Drawing.Point(8, 191);
+            this.tboSpeciesDes.Location = new System.Drawing.Point(8, 212);
             this.tboSpeciesDes.Multiline = true;
             this.tboSpeciesDes.Name = "tboSpeciesDes";
             this.tboSpeciesDes.Size = new System.Drawing.Size(686, 120);
@@ -172,26 +183,26 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 174);
+            this.label3.Location = new System.Drawing.Point(7, 195);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(263, 12);
+            this.label3.Size = new System.Drawing.Size(251, 12);
             this.label3.TabIndex = 2;
-            this.label3.Text = "请列举本项目中的主要绿化物种（200字以内）：";
+            this.label3.Text = "简要说明屋顶绿化或垂直绿化（200字以内）：";
             // 
-            // prgItemEvalKeyL15
+            // prgItemEvalKeyP15
             // 
-            this.prgItemEvalKeyL15.HelpVisible = false;
-            this.prgItemEvalKeyL15.Location = new System.Drawing.Point(6, 20);
-            this.prgItemEvalKeyL15.Name = "prgItemEvalKeyL15";
-            this.prgItemEvalKeyL15.PropertySort = System.Windows.Forms.PropertySort.NoSort;
-            this.prgItemEvalKeyL15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.prgItemEvalKeyL15.Size = new System.Drawing.Size(688, 140);
-            this.prgItemEvalKeyL15.TabIndex = 1;
-            this.prgItemEvalKeyL15.ToolbarVisible = false;
+            this.prgItemEvalKeyP15.HelpVisible = false;
+            this.prgItemEvalKeyP15.Location = new System.Drawing.Point(6, 20);
+            this.prgItemEvalKeyP15.Name = "prgItemEvalKeyP15";
+            this.prgItemEvalKeyP15.PropertySort = System.Windows.Forms.PropertySort.NoSort;
+            this.prgItemEvalKeyP15.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.prgItemEvalKeyP15.Size = new System.Drawing.Size(688, 160);
+            this.prgItemEvalKeyP15.TabIndex = 1;
+            this.prgItemEvalKeyP15.ToolbarVisible = false;
             // 
             // tboTotalSource
             // 
-            this.tboTotalSource.Location = new System.Drawing.Point(598, 134);
+            this.tboTotalSource.Location = new System.Drawing.Point(598, 131);
             this.tboTotalSource.Name = "tboTotalSource";
             this.tboTotalSource.ReadOnly = true;
             this.tboTotalSource.Size = new System.Drawing.Size(142, 21);
@@ -201,7 +212,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(527, 137);
+            this.label2.Location = new System.Drawing.Point(527, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 3;
@@ -232,13 +243,15 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgScientificGreening.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgScientificGreening.Location = new System.Drawing.Point(40, 58);
+            this.dgScientificGreening.EnableHeadersVisualStyles = false;
+            this.dgScientificGreening.Location = new System.Drawing.Point(40, 55);
+            this.dgScientificGreening.MultiSelect = false;
             this.dgScientificGreening.Name = "dgScientificGreening";
             this.dgScientificGreening.ReadOnly = true;
             this.dgScientificGreening.RowHeadersVisible = false;
             this.dgScientificGreening.RowTemplate.Height = 23;
-            this.dgScientificGreening.Size = new System.Drawing.Size(700, 69);
-            this.dgScientificGreening.TabIndex = 2;
+            this.dgScientificGreening.Size = new System.Drawing.Size(700, 66);
+            this.dgScientificGreening.TabIndex = 100;
             // 
             // Column1
             // 
@@ -268,14 +281,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "4.2.15 合理选择绿化方式，科学配置绿化植物。（总分6分）";
             // 
-            // UCItemSaveLandL15
+            // UCItemSaveLandP15
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Name = "UCItemSaveLandL15";
+            this.Name = "UCItemSaveLandP15";
             this.Size = new System.Drawing.Size(780, 990);
-            this.Load += new System.EventHandler(this.UCItemSaveLandL15_Load);
+            this.Load += new System.EventHandler(this.UCItemSaveLandP15_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -290,23 +303,25 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgScientificGreening;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.TextBox tboTotalSource;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PropertyGrid prgItemEvalKeyL15;
-        private System.Windows.Forms.TextBox tboSpeciesDes;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox tboMaterialSubmit;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tboMaterialSubmit;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tboSpeciesDes;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PropertyGrid prgItemEvalKeyP15;
+        private System.Windows.Forms.TextBox tboTotalSource;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgScientificGreening;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+
     }
 }

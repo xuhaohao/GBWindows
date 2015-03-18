@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -6,10 +7,13 @@ using System.Windows.Forms;
 
 namespace GBWindows
 {
-    public class ItemEvalKeyL15
+    public class ItemEvalKeyP15
     {
-        public XProps PropertyGridDataL15()
+
+        public XProps PropertyGridDataP15()
         {
+
+
             XProps xps = new XProps();
             XProp xprop = new XProp();
 
@@ -56,37 +60,48 @@ namespace GBWindows
             xprop = new XProp();
             xprop.Category = "常规";
             xprop.ReadOnly = false;
-            xprop.Name = "项目用地面积(m2)";
+            xprop.Name = "是否采用屋顶绿化";
+            xprop.Value = 1;
+            xprop.ProType = typeof(Helper.MyComboItemConvert);
+            xprop.Converter = new Helper.MyComboItemConvert("是,否");
+            xprop.Description = "是否采用屋顶绿化";
+            xps.Add(xprop);
+
+            xprop = new XProp();
+            xprop.Category = "常规";
+            xprop.ReadOnly = false;
+            xprop.Name = "是否采用垂直绿化";
+            xprop.Value = 1;
+            xprop.ProType = typeof(Helper.MyComboItemConvert);
+            xprop.Converter = new Helper.MyComboItemConvert("是,否");
+            xprop.Description = "是否采用垂直绿化";
+            xps.Add(xprop);
+
+            xprop = new XProp();
+            xprop.Category = "常规";
+            xprop.ReadOnly = false;
+            xprop.Name = "屋顶可绿化面积(m2)";
             xprop.Value = "";
-            xprop.Description = "项目用地面积(m2)";
+            xprop.Description = "屋顶可绿化面积(m2)";
             xprop.ProType = typeof(decimal);
             xps.Add(xprop);
 
             xprop = new XProp();
             xprop.Category = "常规";
             xprop.ReadOnly = false;
-            xprop.Name = "绿地面积(m2))";
+            xprop.Name = "屋顶绿化面积(m2))";
             xprop.Value = "";
-            xprop.Description = "绿地面积(m2)";
+            xprop.Description = "屋顶绿化面积(m2)";
             xprop.ProType = typeof(decimal);
             xps.Add(xprop);
 
             xprop = new XProp();
             xprop.Category = "常规";
             xprop.ReadOnly = false;
-            xprop.Name = "绿地中乔木的数量(株)";
+            xprop.Name = "屋顶绿化面积占屋顶可绿化面积比(%)";
             xprop.Value = "";
-            xprop.Description = "绿地中乔木的数量(株)";
-            xprop.ProType = typeof(int);
-            xps.Add(xprop);
-
-            xprop = new XProp();
-            xprop.Category = "常规";
-            xprop.ReadOnly = false;
-            xprop.Name = "平均每100m2绿地面积上的乔木数(株)";
-            xprop.Value = "";
-            xprop.Description = "平均每100m2绿地面积上的乔木数(株)";
-            xprop.ProType = typeof(int);
+            xprop.Description = "屋顶绿化面积占屋顶可绿化面积比(%)";
+            xprop.ProType = typeof(decimal);
             xps.Add(xprop);
 
             return xps;
@@ -101,7 +116,7 @@ namespace GBWindows
         //{
         //    public override TypeConverter.StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
         //    {
-        //        if (context != null && context.Instance is ItemEvalKeyL15)
+        //        if (context != null && context.Instance is ItemEvalKeyP15)
         //        {
         //            List<string> values = new System.Collections.Generic.List<string>();
         //            values.Add("华北");
@@ -123,7 +138,7 @@ namespace GBWindows
         //{
         //    public override TypeConverter.StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
         //    {
-        //        if (context != null && context.Instance is ItemEvalKeyL15)
+        //        if (context != null && context.Instance is ItemEvalKeyP15)
         //        {
         //            List<string> values = new System.Collections.Generic.List<string>();
         //            values.Add("是");
@@ -138,14 +153,13 @@ namespace GBWindows
         //    }
         //}
 
-        //[CategoryAttribute("3"), TypeConverter(typeof(IsUseConverter))]
-        //[DisplayName("是否采用包含乔、灌木的复层绿化"), Description("是否采用包含乔、灌木的复层绿化")]
+        //[CategoryAttribute("3"), TypeConverter(typeof(IsUseConverter)), DisplayName("是否采用包含乔、灌木的复层绿化")]
         //public string IsUse { get; set; }
         //private class IsUseConverter : StringConverter
         //{
         //    public override TypeConverter.StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
         //    {
-        //        if (context != null && context.Instance is ItemEvalKeyL15)
+        //        if (context != null && context.Instance is ItemEvalKeyP15)
         //        {
         //            List<string> values = new System.Collections.Generic.List<string>();
         //            values.Add("是");
@@ -161,54 +175,85 @@ namespace GBWindows
         //}
 
         //private string deepth = "";
-        //[DisplayName("如绿化植物种植在地下车库顶板上，则种植区域覆土深度(m)"), Description("如绿化植物种植在地下车库顶板上，则种植区域覆土深度(m)")]
+        //[CategoryAttribute("4"), DisplayName("如绿化植物种植在地下车库顶板上，则种植区域覆土深度(m)")]
         //public string Deepth
         //{
         //    get { return deepth; }
         //    set { deepth = value; }
         //}
 
-        //private string projectSite = "";
-        //[DisplayName("项目用地面积(m2)"), Description("项目用地面积(m2)")]
-        //public string ProjectSite
+
+        //[CategoryAttribute("5"), TypeConverter(typeof(IsRoofGreeningConverter)), DisplayName("是否采用屋顶绿化")]
+        //public string IsRoofGreening { get; set; }
+        //private class IsRoofGreeningConverter : StringConverter
         //{
-        //    get { return projectSite; }
-        //    set { projectSite = value; }
+        //    public override TypeConverter.StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
+        //    {
+        //        if (context != null && context.Instance is ItemEvalKeyP15)
+        //        {
+        //            List<string> values = new System.Collections.Generic.List<string>();
+        //            values.Add("是");
+        //            values.Add("否");
+        //            return new StandardValuesCollection(values);
+        //        }
+        //        return base.GetStandardValues(context);
+        //    }
+        //    public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+        //    {
+        //        return true;
+        //    }
+        //}
+
+        //[CategoryAttribute("6"), TypeConverter(typeof(IsVerticalGreeningConverter)), DisplayName("是否采用垂直绿化")]
+        //public string IsVerticalGreening { get; set; }
+        //private class IsVerticalGreeningConverter : StringConverter
+        //{
+        //    public override TypeConverter.StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
+        //    {
+        //        if (context != null && context.Instance is ItemEvalKeyP15)
+        //        {
+        //            List<string> values = new System.Collections.Generic.List<string>();
+        //            values.Add("是");
+        //            values.Add("否");
+        //            return new StandardValuesCollection(values);
+        //        }
+        //        return base.GetStandardValues(context);
+        //    }
+        //    public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+        //    {
+        //        return true;
+        //    }
+        //}
+
+
+        //private string caneGreenArea = "";
+        //[DisplayName("屋顶可绿化面积(m2)"), Description("屋顶可绿化面积(m2)")]
+        //public string CaneGreenArea
+        //{
+        //    get { return caneGreenArea; }
+        //    set { caneGreenArea = value; }
         //}
 
         //private string greenArea = "";
-        //[DisplayName("绿地面积(m2)"), Description("绿地面积(m2)")]
+        //[DisplayName("屋顶绿化面积(m2)"), Description("屋顶绿化面积(m2)")]
         //public string GreenArea
         //{
         //    get { return greenArea; }
         //    set { greenArea = value; }
         //}
 
-        //private string greenQuantity = "";
-        //[DisplayName("绿地中乔木的数量(株)"), Description("绿地中乔木的数量(株)")]
-        //public string GreenQuantity
+        //private string greenSpaceRatio = "";
+        //[DisplayName("屋顶绿化面积占屋顶可绿化面积比(%)"), Description("屋顶绿化面积占屋顶可绿化面积比(%)")]
+        //public string GreenSpaceRatio
         //{
-        //    get { return greenQuantity; }
-        //    set { greenQuantity = value; }
+        //    get { return greenSpaceRatio; }
+        //    set { greenSpaceRatio = value; }
         //}
-
-        //private string areaQuantity = "";
-        //[DisplayName("平均每100m2绿地面积上的乔木数(株)"), Description("平均每100m2绿地面积上的乔木数(株)")]
-        //public string AreaQuantity
-        //{
-        //    get { return areaQuantity; }
-        //    set { areaQuantity = value; }
-        //}
-
         #endregion
 
-
-
-
+      
 
 
     }
-
-
 
 }

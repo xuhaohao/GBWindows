@@ -8,35 +8,24 @@ using System.Windows.Forms;
 
 namespace GBWindows
 {
-    public partial class UCItemSaveLandL15 : UserControl
+    public partial class UCItemSaveLandP15 : UserControl
     {
-        public UCItemSaveLandL15()
+        public UCItemSaveLandP15()
         {
             InitializeComponent();
-
-
-
-
         }
 
-
-        private void UCItemSaveLandL15_Load(object sender, EventArgs e)
+        private void UCItemSaveLandP15_Load(object sender, EventArgs e)
         {
             var data1 = new List<EvaluateInfo>();
             data1.Add(new EvaluateInfo { EvaluateContent = "种植适应当地气候和土壤条件的植物，采用乔、灌、草结合的复层绿化，种植区域覆土深度和排水能力满足植物生长需求", EvaluateScore = "3" });
-            data1.Add(new EvaluateInfo { EvaluateContent = "绿地配植乔木不少", EvaluateScore = "3" });
+            data1.Add(new EvaluateInfo { EvaluateContent = "采用垂直绿化、屋顶绿化等方式", EvaluateScore = "3" });
             dgScientificGreening.DataSource = data1;
+            
 
-
-            ItemEvalKeyL15 l15 = new ItemEvalKeyL15();
-            prgItemEvalKeyL15.SelectedObject = l15.PropertyGridDataL15();
-         
-        }
-
-
-        private void dgScientificGreening_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            this.dgScientificGreening.RowHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            //绑定PropertyGrid值
+            ItemEvalKeyP15 p15 = new ItemEvalKeyP15();
+            prgItemEvalKeyP15.SelectedObject = p15.PropertyGridDataP15();
         }
 
         //内容列表
@@ -58,9 +47,5 @@ namespace GBWindows
                 set { evaluateScore = value; }
             }
         }
-
-
-
-
     }
 }

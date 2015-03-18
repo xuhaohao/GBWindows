@@ -30,12 +30,12 @@ namespace GBWindows
             data2.Add(new Infrastructure());
             data2.Add(new Infrastructure());
             data2.Add(new Infrastructure());
-            var v1 = "场地年径流量(m3)1232424242424";
-            var v2 = "场地年降雨量(m2)424244242";
+            var v1 = "场地年径流量(m3)";
+            var v2 = "场地年降雨量(m2)";
             var v3 = "场地年径流总量控制率(%)";
-            data2.Add(new Infrastructure() { SurfaceType = v1, UtilizationMeasure = v1, Area = v1 });
-            data2.Add(new Infrastructure() { SurfaceType = v2, UtilizationMeasure = v2, Area = v2 });
-            data2.Add(new Infrastructure() { SurfaceType = v3, UtilizationMeasure = v3, Area = v3 });
+            data2.Add(new Infrastructure() { SurfaceType = v1, UtilizationMeasure = v1, Area = v1, RunoffCoefficient = v1 });
+            data2.Add(new Infrastructure() { SurfaceType = v2, UtilizationMeasure = v2, Area = v2, RunoffCoefficient = v2 });
+            data2.Add(new Infrastructure() { SurfaceType = v3, UtilizationMeasure = v3, Area = v3, RunoffCoefficient = v3 });
             dgInfrastructure.DataSource = data2;
         }
 
